@@ -1,7 +1,7 @@
 import  headerCreater  from "./components/header";
 import user from './typescript.ts'
 import './css/header.css'
-import clickHandler from "./components/main";
+// import clickHandler from "./components/main";
 import natureImg from  "./images/download.jpg"
 
 //Heading
@@ -23,7 +23,11 @@ document.body.appendChild(newsContainer)
 const buttonElement = document.createElement("button");
 buttonElement.innerText="Click to fetch News..";
 buttonElement.classList.add("textElement");
-buttonElement.addEventListener("click",clickHandler);
+buttonElement.addEventListener("click",async function(){
+     const {default:clickHandler} = await import('./components/main.js')
+     //console.log(clickHandler)
+    clickHandler();
+});
 newsContainer.appendChild(buttonElement);
 
 

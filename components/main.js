@@ -37,4 +37,4 @@ const renderNewsItems = (newsContainer)=>{
 }
 
 
-export default clickHandler;
+ export default clickHandler;
