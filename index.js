@@ -1,34 +1,46 @@
 import  headerCreater  from "./components/header";
 import user from './typescript.ts'
 import './css/header.css'
-// import clickHandler from "./components/main";
-import natureImg from  "./images/download.jpg"
+import natureImg from  "./assets/images/download.jpg"
 
-//Heading
+/**
+ * Header appended 
+ **/
 const header = headerCreater();
 document.body.appendChild(header)
 
-//Image
+/**
+ * Image appended
+ **/
 const imgEle = document.createElement('img');
 imgEle.src = natureImg;
 document.body.appendChild(imgEle);
 
-//News Container
+
+/**
+ * News Container created and appended
+ **/
 const newsContainer = document.createElement('div');
 newsContainer.classList.add('news');
 document.body.appendChild(newsContainer)
 
 
-//Adding Fetch-News Button
+/**
+ *Adding Fetch-News Button
+ **/
 const buttonElement = document.createElement("button");
 buttonElement.innerText="Click to fetch News..";
 buttonElement.classList.add("textElement");
 buttonElement.addEventListener("click",async function(){
      const {default:clickHandler} = await import('./components/main.js')
-     //console.log(clickHandler)
+    
     clickHandler();
 });
 newsContainer.appendChild(buttonElement);
 
 
-console.log(user)
+/**
+ * Checking if TypeScript is working
+**/
+console.log(user.name);
+

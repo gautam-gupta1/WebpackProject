@@ -1,4 +1,4 @@
-                           Home Task 5
+                                    Home Task 5
 
 1.	Use Babel transpiler to apply ECMAScript 2016+ features and make your application work in all modern browsers.
 2.	Use Babel as a loader

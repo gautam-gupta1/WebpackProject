@@ -21,7 +21,7 @@ const getData = async()=>{
     let newsDataPromise = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
     let parsedData = await newsDataPromise.json();
     data = parsedData.articles;
-    console.log(data);
+   
 }
 const renderNewsItems = (newsContainer)=>{
     newsContainer.innerHTML = "";

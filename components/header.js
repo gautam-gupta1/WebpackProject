@@ -1,8 +1,9 @@
 
-const headerCreater = ()=>{
+const headerCreater = () => {
     const header = document.createElement('div');
     header.classList.add('header')
-    header.innerText = 'News Headlines';
+    const channelNumber = '1'.padStart(3,0);
+    header.innerText = `${channelNumber}:News Headlines`;
     return header;
 }
 

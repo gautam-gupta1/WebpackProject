@@ -1,9 +1,10 @@
+const path = require('path')
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 module.exports = {
     mode: "development",
     entry: "./index.js",
     output: {
-      path: __dirname +"/dist",
+      path: path.join(__dirname,'/dist'),
       filename : "bundle.js"
 
     },
