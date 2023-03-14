@@ -40,7 +40,7 @@ newsContainer.appendChild(buttonElement);
 
 
 /**
- * Checking if TypeScript is working
+ * Checking if TypeScript is working by consoling user property
 **/
 console.log(user.name);
 
